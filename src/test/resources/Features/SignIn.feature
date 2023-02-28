@@ -2,7 +2,7 @@ Feature: Verify the Signin Functionality
  Background:SigninPage
  Given user is on signin screen
 	  
-   @Signin 
+   @signin 
 Scenario Outline: Verify user signin with unregistered email credential 
     When user enter the values <email> and <password>
     Then user click on login button 
@@ -12,7 +12,7 @@ Scenario Outline: Verify user signin with unregistered email credential
     | email 		 			 | password      |
 	  | san@yopmail.com  | Password@123  | 
  
-   @Signin   
+   @signin    
 Scenario Outline: Verify user signin with without user credential 
     When user enter the values <email> and <password>
     Then user click on login button 
@@ -22,7 +22,7 @@ Scenario Outline: Verify user signin with without user credential
     | email			  | password    |
 	  | 					  | 					  | 
 	
-   @Signin 
+   @signin  
 Scenario Outline: Verify user signin with without enter email
     When user enter the values <email> and <password>
     Then user click on login button 
@@ -32,7 +32,7 @@ Scenario Outline: Verify user signin with without enter email
     | email			  | password    |
 	  | 					  | Password@123	| 
 	
-	  @Signin 
+	  @signin 
 Scenario Outline: Verify user signin with without enter password  
     When user enter the values <email> and <password>
     Then user click on login button 
@@ -43,7 +43,7 @@ Scenario Outline: Verify user signin with without enter password
 	  | san@yopmail.com			| 					  | 
 
   
-    @Signin 
+    @signin 
 Scenario Outline: Verify user signin with invalid email credential 
     When user enter the values <email> and <password>
     Then user click on login button 
@@ -54,7 +54,7 @@ Scenario Outline: Verify user signin with invalid email credential
     | san$%^@gmail..1  | Password@123  |
 
 
-    @Signin 
+    @signin  
 Scenario Outline: Verify user signin with invalid password credential 
     When user enter the values <email> and <password>
     Then user click on login button 
@@ -65,7 +65,7 @@ Scenario Outline: Verify user signin with invalid password credential
     | Liveautomation@yopmail.com  | hello@123   |
     
       
-  @Signin 
+  @signin 
 Scenario Outline: Verify user signin with valid credential 
     When user enter the values <email> and <password>
     Then user click on login button

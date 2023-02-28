@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 	@CucumberOptions(features = { "src//test//resources//Features" }, 
 	glue = {"com.livesust.stepdefinition"}, 
 	plugin = {"json:target/cucumber.json"},
-	tags = "@Signin",
+	tags = "@signin",
 	monochrome = true, 
 	dryRun = false)
 
