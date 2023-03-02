@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="7" failures="4" name="com.livesust.testrunner.TestRunner" time="169.521" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.18+9-LTS-195"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\LiveSust\LiveSustWeb\LiveSustWebAutomation"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="com.livesust.testrunner.**"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\LiveSust\LiveSustWeb\LiveSustWebAutomation"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="11.0.18+9-LTS-195"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\SANGEE~1.RM\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\apache-maven-3.8.6\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\apache-maven-3.8.6\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-11\bin;C:\Users\sangeetha.rm\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\bin;;C:\Users\sangeetha.rm\AppData\Roaming\npm;C:\Users\sangeetha.rm\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\TestProject Agent;."/>
+    <property name="maven.conf" value="C:\apache-maven-3.8.6/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\apache-maven-3.8.6\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\sangeetha.rm"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="sangeetha.rm"/>
+    <property name="java.class.path" value="C:\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -Dtest=com.livesust.testrunner.**"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.18"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="maven.home" value="C:\apache-maven-3.8.6"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with unregistered email credential" time="22.273">
+    <failure message="expected:&lt;[]nvalid email&gt; but was:&lt;[I]nvalid email&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[]nvalid email&gt; but was:&lt;[I]nvalid email&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.livesust.stepdefinition.SignInPageStep.assertTheErrorMessageForUnregisteredEmailCredential(SignInPageStep.java:81)
+	at ✽.assert the error message for unregistered email credential(file:///D:/LiveSust/LiveSustWeb/LiveSustWebAutomation/src/test/resources/Features/SignIn.feature:9)
+</failure>
+    <system-out>Directory already exists
+Inside Select Browser
+selecting chrome test
+Livesust Website is launched
+Email is entered
+Password is entered
+password is shown
+password is hidden
+Clicked signin button
+error message:nvalid email
+error message:Invalid email
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 45894
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677662991.153][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Mar 01, 2023 2:59:52 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with without user credential" time="32.651"/>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with without enter email" time="20.922">
+    <failure message="expected:&lt;...r username or email [address]&gt; but was:&lt;...r username or email [id]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;...r username or email [address]&gt; but was:&lt;...r username or email [id]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.livesust.stepdefinition.SignInPageStep.assertTheErrorMessageForWithoutEnterEmail(SignInPageStep.java:118)
+	at ✽.assert the error message for without enter email(file:///D:/LiveSust/LiveSustWeb/LiveSustWebAutomation/src/test/resources/Features/SignIn.feature:29)
+</failure>
+    <system-out>Inside Select Browser
+selecting chrome test
+Livesust Website is launched
+Email is entered
+Password is entered
+password is shown
+password is hidden
+Clicked signin button
+error message:Please enter username or email address
+error message:Please enter username or email id
+</system-out>
+    <system-err>Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 5476
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677663044.791][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Mar 01, 2023 3:00:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with without enter password" time="30.382"/>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with invalid email credential" time="20.658"/>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with invalid password credential" time="20.085">
+    <failure message="User not able to launch Livesust Website" type="java.lang.AssertionError">java.lang.AssertionError: User not able to launch Livesust Website
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.livesust.stepdefinition.SignInPageStep.userEnterTheValuesAnd(SignInPageStep.java:54)
+	at ✽.user enter the values Liveautomation@yopmail.com and hello@123(file:///D:/LiveSust/LiveSustWeb/LiveSustWebAutomation/src/test/resources/Features/SignIn.feature:59)
+</failure>
+    <system-out>Inside Select Browser
+selecting chrome test
+Livesust Website is launched
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-OBS-194&apos;, ip: &apos;172.28.160.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\SANGEE~1.RM\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:65408}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 351187afd331cd192f5a4a9846a01629
+*** Element info: {Using=xpath, value=//input[@id=&apos;Username / E-Mail Address&apos;]}
+</system-out>
+    <system-err>Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 16144
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677663116.676][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Mar 01, 2023 3:01:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="Verify the Signin Functionality" name="Verify user signin with valid credential" time="22.55">
+    <failure message="expected:&lt;[]ogin successfully&gt; but was:&lt;[L]ogin successfully&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[]ogin successfully&gt; but was:&lt;[L]ogin successfully&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.livesust.stepdefinition.SignInPageStep.checkTheUserIsSuccessfullyLoggedintoApp(SignInPageStep.java:197)
+	at ✽.check the user is successfully logged into app(file:///D:/LiveSust/LiveSustWeb/LiveSustWebAutomation/src/test/resources/Features/SignIn.feature:72)
+</failure>
+    <system-out>Inside Select Browser
+selecting chrome test
+Livesust Website is launched
+Email is entered
+Password is entered
+password is shown
+password is hidden
+Clicked signin button
+User successfully logged into app
+error message:ogin successfully
+</system-out>
+    <system-err>Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 5538
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677663136.862][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Mar 01, 2023 3:02:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+</testsuite>
