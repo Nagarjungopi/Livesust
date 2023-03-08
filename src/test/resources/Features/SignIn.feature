@@ -3,7 +3,7 @@ Feature: Verify the Signin Functionality
  Given user is on signin screen
 	  
    @signin 
-Scenario Outline: Verify user signin with unregistered email credential 
+Scenario Outline: Signin-Verify user signin with unregistered email credential 
     When user enter the values <email> and <password>
     Then user click on login button 
     And assert the error message for unregistered email credential
@@ -13,7 +13,7 @@ Scenario Outline: Verify user signin with unregistered email credential
 	  | san@yopmail.com  | Password@123  | 
  
    @signin    
-Scenario Outline: Verify user signin with without user credential 
+Scenario Outline: Signin-Verify user signin with without user credential 
     When user enter the values <email> and <password>
     Then user click on login button 
     And assert the error message for without credential  
@@ -23,7 +23,7 @@ Scenario Outline: Verify user signin with without user credential
 	  | 					  | 					  | 
 	
    @signin  
-Scenario Outline: Verify user signin with without enter email
+Scenario Outline: Signin-Verify user signin with without enter email
     When user enter the values <email> and <password>
     Then user click on login button 
     And assert the error message for without enter email  
@@ -33,7 +33,7 @@ Scenario Outline: Verify user signin with without enter email
 	  | 					  | Password@123	| 
 	
 	  @signin 
-Scenario Outline: Verify user signin with without enter password  
+Scenario Outline: Signin-Verify user signin with without enter password  
     When user enter the values <email> and <password>
     Then user click on login button 
     And assert the error message for without enter password
@@ -44,7 +44,7 @@ Scenario Outline: Verify user signin with without enter password
 
   
     @signin 
-Scenario Outline: Verify user signin with invalid email credential 
+Scenario Outline: Signin-Verify user signin with invalid email credential 
     When user enter the values <email> and <password>
     Then user click on login button 
     And assert the error message for invalid email credential
@@ -55,7 +55,7 @@ Scenario Outline: Verify user signin with invalid email credential
 
 
     @signin  
-Scenario Outline: Verify user signin with invalid password credential 
+Scenario Outline: Signin-Verify user signin with invalid password credential 
     When user enter the values <email> and <password>
     Then user click on login button 
     And assert the error message for invalid password credential
@@ -66,7 +66,7 @@ Scenario Outline: Verify user signin with invalid password credential
     
       
   @signin 
-Scenario Outline: Verify user signin with valid credential 
+Scenario Outline: Signin-Verify user signin with valid credential 
     When user enter the values <email> and <password>
     Then user click on login button
     And check the user is successfully logged into app

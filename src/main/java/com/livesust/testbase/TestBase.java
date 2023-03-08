@@ -21,7 +21,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 
-public class TestBase extends CucumberReport{
+public class TestBase{
 	public static WebDriver driver;
 	public static String AppProperties = System.getProperty("user.dir") + "\\src\\test\\resources\\Config\\config.properties";
 	

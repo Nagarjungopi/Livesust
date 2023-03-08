@@ -1,6 +1,5 @@
 package com.livesust.locators;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.livesust.testbase.TestBase;
