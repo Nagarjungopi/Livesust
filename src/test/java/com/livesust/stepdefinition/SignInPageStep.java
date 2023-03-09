@@ -1,7 +1,6 @@
 package com.livesust.stepdefinition;
 
 import org.junit.Assert;
-import static org.junit.Assert.*;
 import org.openqa.selenium.WebElement;
 import com.livesust.engineController.EngineController;
 import com.livesust.locators.SignInPage;
