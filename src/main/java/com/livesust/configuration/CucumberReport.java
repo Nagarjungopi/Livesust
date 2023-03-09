@@ -9,6 +9,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.livesust.testbase.TestBase;
 
 	public class CucumberReport extends TestBase {
@@ -31,12 +32,11 @@ import com.livesust.testbase.TestBase;
 		public ExtentReports reportEngine() {
 			extent = new ExtentReports();
 			reporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "//test-output//Livesust.html");
-			extent = new ExtentReports();
-			extent.attachReporter(reporter);
 			extent.setSystemInfo("DocumentTile", "LiveSust-Web-Automation");
-			extent.setSystemInfo("ReportName", "Amazon");
-			extent.setSystemInfo("Build", "UAT");
+			extent.setSystemInfo("ReportName", "LiveSust");
+			extent.attachReporter(reporter);
 			return extent;
+		
 		}
 
 		public void reportCreateFeature(String title) {
@@ -84,30 +84,10 @@ import com.livesust.testbase.TestBase;
 			}
 		}
 
-		public void reportStepPass(String Details,String Value) {
-			try {
-				String s = captureScreenshot();
-				step.pass(Details);
-				step.pass(Value, MediaEntityBuilder.createScreenCaptureFromBase64String(s).build());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
 		public void reportStepPass(String Details) {
 			try {
 				String s = captureScreenshot();
 				step.pass(Details, MediaEntityBuilder.createScreenCaptureFromBase64String(s).build());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
-		public void reportStepFail(String Details,String Value) {
-			try {
-				String s = captureScreenshot();
-				step.fail(Details);
-				step.fail(Value, MediaEntityBuilder.createScreenCaptureFromBase64String(s).build());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

@@ -40,12 +40,12 @@ public class SignInPageStep extends TestBase{
 		try {
 			Thread.sleep(2000);
 			clickelement(SignInPage.Email);
-			EngineController.reportInstance.reportStepPass("Enter the email: ",email);
+			EngineController.reportInstance.reportStepPass("Enter the email: "+email);
 			sendKeystoElement(SignInPage.Email,email);
 			System.out.println("Email is entered");
 			Thread.sleep(2000);
 			clickelement(SignInPage.Password);
-			EngineController.reportInstance.reportStepPass("Enter the password: ",password);
+			EngineController.reportInstance.reportStepPass("Enter the password: "+password);
 			sendKeystoElement(SignInPage.Password,password);
 			System.out.println("Password is entered");
 			clickelement(SignInPage.EyeIcon);
@@ -92,7 +92,7 @@ public class SignInPageStep extends TestBase{
 			//	String validationText = validation.substring(1).trim();
 			//	System.out.println("error message:"+validationText);
 				System.out.println("error message:"+SignInPage.InvalidEmailMsg);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validation);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validation);
 				System.out.println("Actual Value: " +validation  + " Expected value: " +SignInPage.InvalidEmailMsg );
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validation  + " Expected value: " +SignInPage.InvalidEmailMsg );
 				Assert.assertEquals(validation,SignInPage.InvalidEmailMsg);	
@@ -115,7 +115,7 @@ public class SignInPageStep extends TestBase{
 			if(errormsg.isDisplayed()) {
 				String validationText = errormsg.getText().trim();
 				System.out.println("error message:"+validationText);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validationText);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validationText);
 				System.out.println("Actual Value: " +validationText  + " Expected value: " +SignInPage.EnterEmailMsg );
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validationText  + " Expected value: " +SignInPage.EnterEmailMsg );
 				Assert.assertEquals(validationText,SignInPage.EnterEmailMsg);	
@@ -138,11 +138,17 @@ public class SignInPageStep extends TestBase{
 			if(errormsg.isDisplayed()) {
 				String validationText = errormsg.getText().trim();
 				System.out.println("error message:"+validationText);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validationText);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validationText);
 				System.out.println("error message:"+SignInPage.InvalidUsernameMsg);
-				System.out.println("Actual Value: " +validationText  + " Expected value: " +SignInPage.InvalidUsernameMsg);			
-				Assert.assertEquals(validationText,SignInPage.InvalidUsernameMsg);
+				System.out.println("Actual Value: " +validationText  + " Expected value: " +SignInPage.InvalidUsernameMsg);	
+				if(validationText.equals(SignInPage.InvalidUsernameMsg)){
+				//Assert.assertEquals(validationText, SignInPage.InvalidUsernameMsg);
+				Assert.assertTrue(validationText.equals(SignInPage.InvalidUsernameMsg));
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validationText  + " Expected value: " +SignInPage.InvalidUsernameMsg);
+				}else {
+					EngineController.reportInstance.reportStepFail("Unable to assert the error message for without enter email");
+					Assert.fail("User not able to launch Livesust Website");
+				}
 			}
 		}catch(Exception e) {
 			System.out.println(e);
@@ -162,7 +168,7 @@ public class SignInPageStep extends TestBase{
 			if(errormsg.isDisplayed()) {
 				String validationText = errormsg.getText().trim();
 				System.out.println("error message:"+validationText);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validationText);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validationText);
 				System.out.println("Actual Value: " +validationText  + " Expected value: " +SignInPage.EnterPasswordMsg );
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validationText  + " Expected value: " +SignInPage.EnterPasswordMsg);
 				Assert.assertEquals(validationText,SignInPage.EnterPasswordMsg);
@@ -186,7 +192,7 @@ public class SignInPageStep extends TestBase{
 			if(errormsg.isDisplayed()) {
 				String validationText = errormsg.getText().trim();
 				System.out.println("error message:"+validationText);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validationText);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validationText);
 				System.out.println("Actual Value: " +validationText  + " Expected value: " +SignInPage.WrongFormat);
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validationText  + " Expected value: " +SignInPage.WrongFormat);
 				Assert.assertEquals(validationText,SignInPage.WrongFormat);
@@ -210,7 +216,7 @@ public class SignInPageStep extends TestBase{
 				String validation = errormsg.getText().trim();
 				//String validationText = validation.substring(1).trim();
 				//System.out.println("error message:"+validationText);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validation);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validation);
 				System.out.println("Actual Value: " +validation  + " Expected value: " +SignInPage.InvalidPasswordMsg );
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validation  + " Expected value: " +SignInPage.InvalidPasswordMsg );
 				Assert.assertEquals(validation,SignInPage.InvalidPasswordMsg);
@@ -237,7 +243,7 @@ public class SignInPageStep extends TestBase{
 				String validation = errormsg.getText().trim();
 				//String validationText = validation.substring(1).trim();
 				//System.out.println("error message:"+validationText);
-				EngineController.reportInstance.reportStepPass("Error Message: ",validation);
+				EngineController.reportInstance.reportStepPass("Error Message: "+validation);
 				System.out.println("Actual Value: " +validation  + " Expected value: " +SignInPage.SuccessMsg );
 				EngineController.reportInstance.reportStepPass("Actual Value: " +validation  + " Expected value: " +SignInPage.SuccessMsg);
 				Assert.assertEquals(validation,SignInPage.SuccessMsg);
