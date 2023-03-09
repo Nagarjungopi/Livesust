@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 	@CucumberOptions(features = { "src//test//resources//Features" }, 
 	glue = {"com.livesust.stepdefinition","com.livesust.engineController"}, 
 	plugin = {"json:target/cucumber.json", "html:target/cucumber.html"},
-	tags = "@signinn",
+	tags = "@signin",
 	monochrome = true, 
 	dryRun = false)
 
